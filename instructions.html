@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./assets/css/instructions.css" />
+    <link
+      rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap"
+    />
+
+    <style>
+      @font-face {
+        :font-family: "Monograf";
+        src: url("./assets/fonts/MonografRegular.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        :font-family: "MonografText";
+        src: url("./assets/fonts/MonografTextRegular.ttf");
+        font-weight: 400;
+      }
+    </style>
+    <title>Instructions</title>
+  </head>
+  <body>
+  <div class="container">
+      <div class="instructions-">INSTRUCTIONS_</div>
+
+      <div class="rectangle-group">
+        <div class="rectangle-1"></div>
+        <div class="rectangle-2"></div>
+      </div>
+
+
+      <div class="select-a-language">SELECT A LANGUAGE FOR QUESTIONS</div>
+
+      <div class="button-lang">
+        <button class="button-1" onclick="changeColor(this)">C++</button>
+        <button class="button-2" onclick="changeColor(this)">Java</button>
+        <button class="button-3" onclick="changeColor(this)">Python</button>
+      </div>
+
+      <div class="line-vertical-slang"></div>
+
+      <div class="total-time-container">
+        <div class="line-horizontal-time"></div>
+        <div class="time">Time : 45 min</div>
+      </div>
+
+      <div class="total-questions">
+
+        <div class="text-total-questions">Total Questions : 35</div>
+        <div class="line-horizontal-tque"></div>
+        <div class="easy-tq-parent">
+          <div class="easy-tq-container">
+            <span>Easy</span>
+            <span class="min"> : 20          05 pts </span>
+          </div>
+          <div class="line-vertical-tq"></div>
+
+          <div class="line-horizontal-tq-easy"></div>
+          <div class="line-horizontal-tq-medium">
+            <span>Medium</span>
+            <span class="min"> : 10            10 pts </span>
+          </div>
+          <div class="line-horizontal-tq-hard"></div>
+          <div class="hard-5-container">
+            <span>Hard</span>
+            <span class="min"> : 5            15pts </span>
+          </div>
+          <div class="group-child11"></div>
+        </div>
+      </div>
+
+      <div class="power-ups">
+        <div class="text-power-ups">Power Ups</div>
+        <div class="line-horizontal-pwrup"></div>
+
+        <div class="line-vertical-pwrup"></div>
+        <div class="solve-questions-in">Solve Questions in Limited Time</div>
+
+        <div class="pwrup-sque-parent">
+
+          <div class="line-vertical-pwrup-sque"></div>
+          <div class="easy-10-container">
+            <span>Easy</span>
+            <span class="min"> : 10 min </span>
+          </div>
+          <div class="line-horizontal-sque-easy"></div>
+
+          <div class="medium-20-container">
+            <span>Medium</span>
+            <span class="min"> : 20 min </span>
+          </div>
+          <div class="line-horizontal-sque-medium"></div>
+          <div class="hard-35-container">
+            <span>Hard</span>
+            <span class="min"> : 35 min </span>
+          </div>
+          <div class="line-horizontal-sque-hard"></div>
+        </div>
+        <div class="line-horizontal-hint"></div>
+        <div class="hint-2-container">
+          <span>Hint :</span>
+          <span class="cant-return-to"> -2 min</span>
+          <span> from Remaining Time</span>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="desktop-2-child3"></div>
+
+      <div class="warning1">
+        <div class="text-warning1">
+          <span>Participant </span>
+          <span class="cant-return-to">can’t return to previous question</span>
+          <span> once skipped/answered. So, take decisions accordingly.</span>
+        </div>
+        <div class="line-horizontal-warning1"></div>
+      </div>
+
+      <div class="warning2">
+        <div class="text-warning2">
+          <span>If a participant is </span>
+          <span class="cant-return-to">
+          caught using the internet or any other prohibited materials
+        </span>
+          <span> , they will be </span>
+          <span class="cant-return-to">disqualified</span>
+          <span> from the event.</span>
+        </div>
+        <div class="line-horizontal-warning2"></div>
+      </div>
+
+
+<!--      <img class="button-next" alt="" src="assets/img/group-6.svg" />-->
+      <div class="icon">
+        <div class="circle1">
+          <div class="circle2">
+            <a href="./questions.html"><span class="white">></span></a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <script>
+      let selectedLanguage = ``;
+      const button1 = document.querySelector('.button-1');
+      const button2 = document.querySelector('.button-2');
+      const button3 = document.querySelector('.button-3');
+
+      button1.addEventListener('click', () => {
+        selectedLanguage="cpp"
+        button1.classList.add('active');
+        button2.classList.remove('active');
+        button3.classList.remove('active');
+      });
+
+      button2.addEventListener('click', () => {
+        selectedLanguage="java"
+        button2.classList.add('active');
+        button1.classList.remove('active');
+        button3.classList.remove('active');
+      });
+
+      button3.addEventListener('click', () => {
+        selectedLanguage="python"
+        button3.classList.add('active');
+        button1.classList.remove('active');
+        button2.classList.remove('active');
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const nextButton = document.querySelector('.icon');
+        nextButton.addEventListener("click",
+                () => {
+                  localStorage.setItem('selectedLanguage', selectedLanguage);
+                  console.log(localStorage['name'])
+                  console.log(localStorage['contact'])
+                  console.log(localStorage['selectedLanguage'])
+                });
+
+      });
+    </script>
+
+  </body>
+</html>

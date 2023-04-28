@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sankalan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Squash The <span class="red">Bugs</span></h1>
+        <div class="rectangle">
+            <div class="rectangle1"></div>
+            <div class="rectangle1 overlay">
+                <form>
+                    <label for="name">> Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <label for="contact">> Contact No.</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter your Contact No.">
+                </form>
+            </div>
+        </div>
+        <div class="icon">
+            <div class="circle1">
+                <div class="circle2">
+                    <a href="./instructions.html"><span class="white">></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nextButton = document.querySelector('.icon');
+            const nameVal = document.getElementById('name');
+            const contact = document.getElementById('contact');
+            nextButton.addEventListener("click",
+                () => {
+                    localStorage.setItem('name', nameVal.value);
+                    localStorage.setItem('contact', contact.value);
+                });
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>
