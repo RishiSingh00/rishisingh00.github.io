@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'MonografRegular';
+    src: url(../fonts/MonografRegular.ttf);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+    font-weight: 700;
+    font-family: 'MonografRegular', sans-serif;
+}
+.red{
+    color: red;
+}
+.rectangle{
+    width: 50%;
+    height: 50%;
+    margin: 30px;
+    position: relative;
+}
+.rectangle1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+.overlay{
+    z-index: 9;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    color: white;
+    font-family: 'MonografRegular', sans-serif;
+    width: 100%;
+    margin: 30px;
+    font-size: 25px;
+}
+input{
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: transparent;
+    color: white;
+    font-family: 'MonografRegular', sans-serif;
+    width: 100%;
+    margin: 30px;
+    outline: none;
+    font-size: 20px;
+}
+input::placeholder{
+    color: rgb(217, 213, 213);
+    font-family: 'MonografRegular', sans-serif;
+    font-size: 20px;
+}
+
+/* Next Button */
+
+.icon{
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.circle1{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.circle1:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+.circle2{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.circle1:hover .circle2{
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+}
+.circle1:hover .circle2 .white{
+    color: #000000;
+}
+.white{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
+

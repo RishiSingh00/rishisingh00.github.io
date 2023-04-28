@@ -1,0 +1,45 @@
+{
+  "cpp": [
+    {
+      "que": "// Your First C++ Program#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question1"
+    },
+    {
+      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question2"
+    },
+    {
+      "que": "// Your Third C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question3"
+    },
+    {
+      "que": "// Your Fourth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
+    }
+  ],
+
+  "java": [
+    {
+      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question2"
+    }
+  ],
+
+  "python": [
+    {
+      "que": "// Your First C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question1"
+    },
+    {
+      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question2"
+    }
+  ]
+}
