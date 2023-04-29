@@ -1,84 +1,233 @@
 {
   "cpp": [
     {
-      "que": "// Your First C++ Program#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
+      "que": "#include <iostream> \nusing namespace std; \n \n \nint main() { \n    int a = 2; \n    int b = 3; \n    int c = 1; \n \n \n    if (a < b < c) { \n        cout << \"True\" << endl; \n    } else { \n        cout << \"False\" << endl; \n    } \n \n \n    return 0; \n} ",
       "ans": "",
-      "hint":"hello i am hint for question1"
+      "hint":"No Hint fir easy Questions."
     },
     {
-      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que":"#include <iostream> \nusing namespace std; \n \n \nint main() { \n    double balance = 1000.00; \n    double deposit, withdraw; \n \n \n    cout << \"Your current account balance is $\" << balance << endl; \n \n \n    cout << \"Enter the amount to deposit: \"; \n    cin >> deposit; \n \n \n    balance += deposit; \n \n \n    if (deposit < 0) { \n        cout << \"Error: Cannot deposit negative amount.\" << endl; \n    } else { \n        cout << \"Deposit successful. Your new balance is $\" << balance << endl; \n    } \n \n \n    cout << \"Enter the amount to withdraw: \";` \n    cin >> withdraw;   \n \n \n    if (withdraw > balance) { \n        cout << \"Error: Withdrawal amount exceeds account balance.\" << endl; \n    } else { \n        balance -= withdraw; \n        cout << \"Withdrawal successful. Your new balance is $\" << balance << endl; \n    } \n \n \n    return 0; \n} \n \n",
       "ans": "",
-      "hint":"hello i am hint for question2"
+      "hint":"No hint for Easy Questions."
     },
     {
-      "que": "// Your Third C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include<iostream>  \nInt main(){ \nInt arr[]={10,20,30,40,50}; \nInt size_of_array=sizeof(arr)/sizeof(int); \nfor(int i=0;i<size_of_array;i++){ \nfor(int arr:arr){ \ni++; \nif( \n} \n} \nif(i==10} \n{ \ncontinue; \n} \n} ",
       "ans": "",
       "hint":"hello i am hint for question3"
     },
     {
-      "que": "// Your Fourth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "int power(int x,unsigned int y){ \nif(y==0){ \nreturn 1; \n} \nelse if(y%2==0){ \nreturn power(x,y/2)*power(x,y/2); \n} \nelse { \n\treturn x*power(x,y/2); \n} \n} ",
       "ans": "",
       "hint":"hello i am hint for question4"
-    },{
-      "que": "// Your fifth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
-      "ans": "",
-      "hint":"hello i am hint for question4"
-    },{
-      "que": "// Your sixth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
-      "ans": "",
-      "hint":"hello i am hint for question4"
-    },{
-      "que": "// Your 7 C++ Program#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
-      "ans": "",
-      "hint":"hello i am hint for question1"
     },
     {
-      "que": "// Your 8 C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include<iostream> \nusing namespace std; \nint main() \n{ \n    myfunction(); \n    cout<<\"a= \"<<a;  \n \n \n} \nint a;              \nvoid myfunction() \n{ \n    cout<<\"a =\"<< a;   \n    a++; \n} ",
       "ans": "",
-      "hint":"hello i am 8 for question2"
+      "hint":"hello i am hint for question4"
     },
     {
-      "que": "// Your 9 C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include<iostream> \nusing namespace std; \n/* \n    You cannot add a new function or change the type of formal argument \n    of function Sankalan to exact match \n*/ \nclass A \n{ \n   public: \n    void Sankalan(int x) \n    { \n        cout<<endl<<\"In function Sankalan\"; \n    } \n}; \nvoid Sankalan(float x) \n{ \n    cout<<endl<<\"In function Sankalan\"; \n} \nint main() \n{ \n    A obj; \n    char x='A'; \n    float y=4.9; \n    obj.Sankalan(y); \n    Sankalan(x); \n} ",
       "ans": "",
-      "hint":"hello i am 9 for question3"
+      "hint":"Limit mai aa kr kaam kr."
     },
     {
-      "que": "// Your Fourth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include <stdio.h> \nint main() \n{ \n    \tvoid *pvData; \n   \t int iData = 10; \n    \tchar cData = 'A'; \n    \tfloat fData = 27.6; \n    \tpvData = &cData; \n    \tprintf(\"cData = %c\\n\\n\",*((char)pvData)); \n   \t pvData = iData; \n    \tprintf(\"iData = %d\\n\\n\",*((int )pvData)); \n   \t pvData = &fData; \n    \tprintf(\"fData = %f\\n\\n\",*(float )pvData)); \n    \treturn 0; \n} \n ",
       "ans": "",
-      "hint":"hello i am hint for question4"
+      "hint":"Bhai jana kidhar hai yeh toh btade."
+    },
+    {
+      "que": "#include<iostream>   \nusing namespace std;   \nint main() {   \n    int year;   \n    cout<<\"Enter a year: \";   \n    cin>>year;   \n    if((year%4==0) || ((year%400==0) && (year%100!=0)) )  \n    {   \n        cout<<\"It is a leap year\";   \n    } else {   \n        cout<<\"Not a leap year\";   \n    }   \n    return 0; \n}   ",
+      "ans": "",
+      "hint":"Adarak kya jaane Bandar ka swaad."
+    },
+    {
+      "que": "class Solution { \npublic: \n    ListNode *reverseList(ListNode* head) { \n        if(head==NULL){ \n            return head; \n        } \n        ListNode *newHead=reverseList(head->next); \n        ListNode *headNext=head->next; \n        headNext->next=head; \n        head=NULL; \n        return newHead; \n    } \n}; ",
+      "ans": "",
+      "hint":"Thhora aage piche dekh k chlo bhaiya !!!"
+    },
+    {
+      "que": "#include <iostream> \n#include<vector> \nusing namespace std; \n \n \nint capacity=11; \nvector<int> numberofitems; \nint count=0; \nvoid addingproducts(int item){ \n    if(count<capacity){ \n        numberofitems.push_back(item); \n        count++; \n    } \n    else{ \n        cout<<\"You can not add more in this cart\"; \n    } \n} \nvoid removingproducts(int item){ \n    if(count<=0){ \n        cout<<\"cart is empty \"<<endl; \n        return; \n    } \n   for(int i=0;i<numberofitems.size();i++){ \n       if(numberofitems[i]==item){ \n           numberofitems.erase(numberofitems.begin()+i); \n       } \n   } \n} \nint amount_to_pay(int count1){ \n    int amount=count1*75; \n    if(count1>=10){ \n        amount=amount-count1%10; \n    } \n    return amount;    } ",
+      "ans": "",
+      "hint":"1)Pita ji ki patlun do bilaan chhoti krdo (5 star Advertisement) \n2)Jo dikhta hai hr baar jroori nhi wohi hoye   "
+    },
+    {
+      "que": "#include<iostream> \nusing namespace std; \nclass Fest \n{ \n    public: \n        void name_of_fest(string s) \n        { \n            cout<<endl<<\"Event - \"<<s; \n        } \n}; \nclass Faculty : public Fest \n{ \n    public: \n        void money_contribution(int x) \n        { \n            cout<<endl<<\"contribution  is \"<<x; \n        } \n}; \nclass Students : public Fest \n{ \n    public: \n        void event (string s) \n        { \n            cout<<endl<<\"event is \"<<s; \n        } \n}; \n \n \nclass Age :public Faculty, public Students \n{ \n    public: \n        void my_age(int x) \n        { \n            cout<<endl<<\"age is \"<<x; \n        } \n}; \n \n \nint main() \n{ \n    Age obj; \n    obj.my_age(21); \n    obj.event(\"Bug Fixing\"); \n    obj.money_contribution(500); \n    obj.name_of_fest(\"Sankalan\");    \n    return 0; \n} ",
+      "ans": "",
+      "hint":"वर्चुअल दुनिया में जीतना असली दुनिया में जीतने से कहीं ज्यादा मुश्किल होता है।\n"
+    },
+    {
+      "que": "#include<iostream> \nusing namespace std; \nclass Complex \n{ \n    int real,img; \n    public: \n \n \n        Complex(int real,int img) \n        { \n            this->real=real; \n            this->img=img; \n        } \n        Complex (Complex c) \n        { \n            real=c.real; \n            img=c.img; \n        } \n}; \nint main() \n{ \n    Complex c1(3,6), c2; \n    Complex c5=c1; \n    c2=c5; \n} ",
+      "ans": "",
+      "hint":"1) Bhai jana kidhar hai yeh toh btade \n2) You cann’t call something which is not declared. \n"
     },{
-      "que": "// Your fifth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include<iostream> \nusing namespace std; \nclass Complex \n{ \n    private: \n         int real,img; \n    public: \n        Complex()   {   } \n        Complex(int real,int img) \n        { \n            this->real= real; \n            this->img=img; \n        } \n        operator++() \n        { \n            Complex temp; \n            temp.real=real++; \n            temp.img=img++; \n            return temp; \n        } \n        void show() \n        { \n            cout<<endl<<\"real= \"<<real<<\" img = \"<<img; \n        }      \n}; \nint main() \n{ \n    Complex c1(5,6),c2(9,2); \n    c1++.show(); \n    ++c1.show(); \n} \n ",
       "ans": "",
-      "hint":"hello i am hint for question4"
+      "hint": "1) \nFather: - Papa ji bol Papa ji  \nSon:- Ji papa  \nFather:-  Abe aage nhi pichoo ji lgga  \n2) \nMujhe kya chahiye , tu mujhe kya de rha hai "
     },{
-      "que": "// Your sixth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "#include<iostream> \n#define SIZE 5 \nusing namespace std; \nclass STACK \n{ \n    private: \n        int num[SIZE]; \n        int top; \n    public: \n        STACK();    //defualt constructor \n        int push(int); \n        int pop(); \n        int isEmpty(); \n        int isFull(); \n        void displayItems(); \n}; \nSTACK::STACK(){ \n    top=-1; \n} \n  \nint STACK::isEmpty(){ \n    if(top==-1) \n        return 1; \n    else \n        return 0;    \n} \n  \nint STACK::isFull(){ \n    if(top==(SIZE-1)) \n        return 1; \n    else \n        return 0; \n} \n  \nint STACK::push(int n){ \n    //check stack is full or not \n    if(isEmpty()){ \n        return 0; \n    } \n    ++top; \n    num[top]=n; \n} \n  \nint STACK::pop(){ \n    //to store and print which number \n    //is deleted \n    int temp; \n    //check for empty \n    if(isFull()) \n        return 0; \n    temp=top; \n    --top; \n    return temp; \n      \n} \n  \nvoid STACK::displayItems(){ \n    int i; //for loop \n    cout<<\"STACK is: \"; \n    for(i=(top); i>=0; i--) \n        cout<<num[i]<<\" \"; \n    cout<<endl; \n} \n  \nint main(){ \n    //declare object \n    STACK stk; \n    int choice, n,temp; \n      \n    do \n    { \n        cout<<endl; \n        cout<<\"0 - Exit.\"<<endl; \n        cout<<\"1 - Push Item.\"<<endl; \n        cout<<\"2 - Pop Item.\"<<endl; \n        cout<<\"3 - Display Items (Print STACK).\"<<endl; \n          \n        cout<<\"Enter your choice: \"; \n        cin>>choice; \n          \n        switch(choice){ \n            case 0: break; \n              \n            case 1: \n                cout<<\"Enter item to insert: \"; \n                cin>>n; \n                temp=stk.push(n); \n                if(temp==0) \n                    cout<<\"STACK is FULL.\"<<endl; \n                else \n                    cout<<temp<<\" inserted.\"<<endl; \n            break; \n                  \n            case 2: \n                temp=stk.pop(); \n                if(temp==0) \n                    cout<<\"STACK IS EMPTY.\"<<endl; \n                else \n                    cout<<temp<<\" is removed (popped).\"<<endl; \n            break; \n              \n            case 3: \n                stk.displayItems(); \n                break; \n              \n            default: \n                cout<<\"An Invalid choice.\"<<endl; \n        }    \n    }while(choice!=0); \n  \n      \n    return 0; \n      \n} ",
       "ans": "",
-      "hint":"hello i am hint for question4"
+      "hint": "Think Logically How the push & pop operations works.\n"
+    },{
+      "que": "#include <iostream> \n#include <fstream> \nusing namespace std; \nint main() \n{ \nfstream new_file;  \nnew_file.open(\"new_file_write.txt\",ios::out);   \nif(!new_file)  \n{ \ncout<<\"File creation failed\"; \n} \nelse \n{ \ncout<<\"New file created\"; \nnew_file<<\"Learning File handling\"; \nnew_file.close();  \n}    \nreturn 0; \n} ",
+      "ans": "",
+      "hint": "Dialogue of 3 idiots...SB CHANGA SI...."
     }
   ],
 
   "java": [
     {
-      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que":"Which of the following is not correct.\n\n1. final public static void main(String[] args)\n2. public static void main(String… args)\n3. synchronized public static void main(String[] args)\n4. native public static void main(String[] args)\n\nAns: \n",
       "ans": "",
-      "hint":"hello i am hint for question2"
-    },{
-      "que":"ans",
-      "ans": "",
-      "hint":"hello i am hint for question2"
-    }
-  ],
-
-  "python": [
-    {
-      "que": "// Your First C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
-      "ans": "",
-      "hint":"hello i am hint for question1"
+      "hint":""
     },
     {
-      "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "que": "//Check if the following code is correct or not , if not write the correct version of it.\n\npublic class Sankalan{\n    public static void main(String[] args) throws IOException{\n        int a = 2;\n        int b = 3;\n        int c = 1;\n    \n        if (a < b < c) {\n            System.out.println(true);\n        } else {\n            System.out.println(false);\n        }\n    \n    }\n}\n",
       "ans": "",
-      "hint":"hello i am hint for question2"
+      "hint":""
+    },
+    {
+      "que": "//Check if the following code is correct or not , if not write the correct version of it.\n\n   public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int year;\n        System.out.print(\"Enter a year: \");\n        year = sc.nextInt();\n        if ((year % 4 == 0) || ((year % 400 == 0) && (year % 100 != 0))) {\n            System.out.println(\"It is a leap year\");\n        } else {\n            System.out.println(\"Not a leap year\");\n        }\n        sc.close();\n    }\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "//Write the output of the following code.\n\npublic class Sankalan{\n    public static void main(String[] args) throws IOException{\n        FileWriter fw = new FileWriter(\"abc.txt\");\n        PrintWriter out = new PrintWriter(fw);\n\n\n        out.write(100);\n        out.println(100);\n        out.println(true);\n        out.flush();\n        out.close();\n    }\n}\n\nAns:\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "//The following code presents an implementation of a linked list in Java. Please review and correct any bugs present.\n\nimport java.util.LinkedList;\n\n\npublic class LinkedList {\n    private Node head;\n\n\n    public LinkedList() {\n        head = null;\n    }\n\n\n    public void add(int data) {\n        Node newNode = new Node(data);\n        if (head == null) {\n            head = newNode;\n        } else {\n            Node current = head;\n            while (current != null) {\n                current = current.next;\n            }\n            current = newNode;\n        }\n    }\n\n\n    public void remove(int data) {\n        Node current = head;\n        Node prev = null;\n        while (current != null && current.data != data) {\n            prev = current;\n            current = current.next;\n        }\n        if (current != null) {\n            prev.next = current.next;\n            current.next = null;\n        }\n    }\n\n\n    public void print() {\n        Node current = head;\n        while (current != null) {\n            System.out.print(current.data + \" \");\n            current = current.next;\n        }\n    }\n\n\n    private class Node {\n        private int data;\n        private Node next;\n\n\n        public Node(int data) {\n            this.data = data;\n            next = null;\n        }\n    }\n}\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "//Pawan has a task to print pairs of numbers in reverse order, from N to 1. He decides to assign \n//this task to two threads for parallel execution, but he notices that the threads are exhibiting \n//unpredictable behaviour. Can you help Rishi fix the bugs in the code and ensure that the pairs of \n//numbers are printed correctly, starting from N to 1?\npublic class Pairs extends Thread {\n    static int N = 0;\n\n\n    public Pairs(int N) {\n        Pairs.N = N;\n    }\n\n\n    public void run() {\n        while (N > 0) {\n            System.out.println(\"Counter: \" + N);\n            N--;\n        }\n    }\n\n\n    public static void main(String[] args) {\n        Pairs t1 = new Pairs(10);\n        Pairs t2 = new Pairs(10);\n        t1.start();\n        t2.start();\n    }\n}\n",
+      "ans": "",
+      "hint": "Sometimes you just need is a power nap"
+    },
+    {
+      "que": "//Resolve errors in the given code, if any.\npublic class Test{\n    byte total=0;\n\n\n    static void findSum(){\n        byte a = 10;\n        byte b = 20;\n        total = (a+b);\n        System.out.println(total);\n    }\n\n\n    public static void main(String args[]){\n        findSum();\n    }\n}\n",
+      "ans": "",
+      "hint": "Gabbar: Kitne aadmi the..."
+    },
+    {
+      "que": "//Imagine you are building a shopping website that allows customers to add items to their cart.\n//The website has a feature that allows customers to remove all occurrences of an item\n// from their cart with a single click. However, due to a bug in the code, the \"remove all\" feature is not working as expected. This is causing frustration \n//for customers. As a developer, you need to investigate the issue and fix the bug \n//to ensure that the \"remove all\" feature works as expected.\npublic class ShoppingCart {\n    public static void main(String[] args) {\n        LinkedList<String> list = new LinkedList<String>();\n        list.add(\"Bread\");\n        list.add(\"Milk\");\n        list.add(\"Milk\");\n        list.add(\"Egg\");\n        list.add(\"Oats\");\n        list.add(\"Bread\");\n        list.add(\"Milk\");\n        list.add(\"Milk\");\n        list.add(\"Egg\");\n        list.add(\"Oats\");\n        \n        int size = list.size();\n\n\n        for (int i = 0; i < size; i++) {\n            if (list.get(i).equals(\"Milk\")) {\n                list.remove(i);\n            }\n        }\n        \n        System.out.println(list);\n    }\n}\n",
+      "ans": "",
+      "hint": "Pitaji ki patlun 1 bilan choti kr do(famous 5 star add).\n"
+    },
+    {
+      "que": "//Resolve errors in the given code, if any.\nclass Animal{\n    int animal=5;\n    public void print(){\n        System.out.println(\"Animal\");\n    }\n}\n\n\nclass Monkey extends Animal{\n    int monkey = 10;\n    public void print(){\n        System.out.println(\"Monkey\");\n    }\n}\n\n\npublic class Sankalan{\n    public void print(Animal a){\n        System.out.println(\"Animal version\");\n    }\n\n\n    public void print(Monkey m){\n        System.out.println(\"Monkey version\");\n    }\n\n\n    public void print(double num) {\n        System.out.println(\"Integer: \" + num);\n    }\n\n\n    public void print(Object str){\n        System.out.println(\"This is object: \"+str);\n    }\n    public void print(String str) {\n        System.out.println(\"String: \" + str);\n    }\n\n\n    public void print(double num, int num2) {\n        System.out.println(\"Integer: \" + num + \", String: \" + num2);\n    }\n\n\n    public static void main(String[] args){\n        Sankalan obj = new Sankalan();\n\n\n        Animal a1 = new Monkey();\n        obj.print(a1);\n        a1.print();\n        obj.print(10);\n        obj.print(\"Its fun\");\n        obj.print(10,20);\n    }\n}\n",
+      "ans": "",
+      "hint": " 3 idiots movie dialogue."
+    },
+    {
+      "que": "//FIND AND DEBUG THE ERROR IN THE FOLLOWING CODE\npublic class Sankalan{\n    public void m1(){\n        static int x=10;\n        class Inner{\n            public static void m2(){\n                System.out.println(x);\n            }\n        }\n        Inner i = new Inner();\n        Inner.m2();\n    }\n\n\n    public static void main(String[] args){\n        Sankalan obj = new Sankalan();\n        obj.m1();\n    }\n}\n",
+      "ans": "",
+      "hint": "Vocal for local."
+    },
+    {
+      "que": "// What will be the output of given code.\nclass Sankalan{\n\n\n    static int i=10;\n    static{\n        m1();\n        System.out.println(\"first static block\");\n    }\n    public static void main(String[] args){\n        m1();\n        System.out.println(\"main method\");\n    }\n\n\n    public static void m1(){\n        System.out.println(j);\n    }\n\n\n    static{\n        System.out.println(\"Second static block\");\n    }\n    static int j=20;\n}\n",
+      "ans": "",
+      "hint": "1. Variables,blocks == static . 2 = 3. Starting point"
+    },
+    {
+      "que": "//In a banking application that is widely used by thousands of customers daily, there are some bugs that have been \n//exploited by a group of hackers to steal money from multiple customer accounts. The bank's security team is notified when they \n//observe an abrupt increase in fraudulent activities, but they are having difficulty locating the root cause of the problem. Assist them in identifying and resolving the bug.\npublic class BankAccount {\n    private static int balance;\n\n\n    public BankAccount(int initialBalance) {\n        balance = initialBalance;\n    }\n\n\n    public void deposit(int amount) {\n        balance += amount;\n    }\n\n\n    public void withdraw(int amount) {\n        if (amount <= balance) {\n            balance -= amount;\n        }\n    }\n\n\n    public int getBalance() {\n        return balance;\n    }\n\n\n    public static void main(String[] args) {\n        BankAccount account = new BankAccount(1000);\n\n\n        Thread depositThread = new Thread(() -> {\n            for (int i = 0; i < 100; i++) {\n                account.deposit(10);\n                try {\n                    Thread.sleep(10);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        });\n\n\n        Thread withdrawThread = new Thread(() -> {\n            for (int i = 0; i < 100; i++) {\n                account.withdraw(10);\n                try {\n                    Thread.sleep(5);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        });\n\n\n        depositThread.start();\n        withdrawThread.start();\n\n\n        try {\n            depositThread.join();\n            withdrawThread.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n\n\n        System.out.println(\"Final balance: \" + account.getBalance());\n    }\n}\n",
+      "ans": "",
+      "hint": " 1.Sharing is caring, but not always.  2.Bhai dhakka mukki mt kro ek ek kr k aao"
+    },
+    {
+      "que": " //Resolve errors in the given code, if any.\ninterface Inter{\n    void method1();\n    void method2();\n}\n\n\nclass ServiceProvider implements Inter{\n    void method1(){\n\n\n    }\n}\n\n\nclass ServiceProvider2 extends ServiceProvider{\n    void method2(){\n\n\n    }\n}\npublic class Test{\n    public static void main(String[] args){\n        ServiceProvider2 obj = new ServiceProvider2();\n        obj.method1();\n        obj.method2();\n    }\n}\n",
+      "ans": "",
+      "hint": "Son has to pay father’s debt or he can pass on."
+    },
+    {
+      "que": "//Resolve errors in the given code, if any.\npublic class BankAccount {\n    private double balance;\n    private String accountHolder;\n    private int accountNumber;\n\n\n    public BankAccount(double balance, String accountHolder, int accountNumber) {\n        this.balance = balance;\n        this.accountHolder = accountHolder;\n        this.accountNumber = accountNumber;\n    }\n\n\n    public void deposit(double amount) throws NegativeAmountException {\n        if (amount < 0) {\n            throw new NegativeAmountException(\"Invalid amount entered.\");\n        }\n        balance += amount;\n    }\n\n\n    public void withdraw(double amount) throws InsufficientFundsException {\n        if (balance < amount) {\n            throw new InsufficientFundsException(\"Not enough funds in account.\");\n        }\n        balance -= amount;\n    }\n\n\n    public double getBalance() {\n        return balance;\n    }\n\n\n    public void setBalance(double balance) {\n        this.balance = balance;\n    }\n\n\n    public String getAccountHolder() {\n        return accountHolder;\n    }\n\n\n    public void setAccountHolder(String accountHolder) {\n        this.accountHolder = accountHolder;\n    }\n\n\n    public int getAccountNumber() {\n        return accountNumber;\n    }\n\n\n    public void setAccountNumber(int accountNumber) {\n        this.accountNumber = accountNumber;\n    }\n\n\n    public void transfer(BankAccount targetAccount, double amount) throws NegativeAmountException, InsufficientFundsException {\n        if (amount < 0) {\n            throw new NegativeAmountException(\"Invalid amount entered.\");\n        }\n        if (this == targetAccount) {\n            throw new IllegalArgumentException(\"Cannot transfer to same account.\");\n        }\n        this.withdraw(amount);\n        targetAccount.deposit(amount);\n    }\n}\n",
+      "ans": "",
+      "hint": " Jeetne k liye socha hi nhi karj sambhalane honge……"
+    },
+    {
+      "que": "//Resolve errors in the given code, if any.\npublic class Sankalan{\n    Sankalan(){\n        System.out.println(\"No args\");\n        this(10);\n    }\n\n\n    Sankalan(int i){\n        this(10.5);\n        System.out.println(\"Int args\");\n    }\n    Sankalan(double i){\n        this(10.5);\n        System.out.println(10.5/0);\n    }\n\n\n    public static void main(String[] args){\n        Sankalan obj = new Sankalan();\n        Sankalan obj2 = new Sankalan(10);\n        Sankalan obj3 = new Sankalan(100.5);\n    }\n\n\n}\n",
+      "ans": "",
+      "hint": "1.this is the first hint.\n2. Recursion.\n"
     }
+  ],
+  "python": [
+    {
+      "que": "#Is there any error in this? If yes then find out\n\ndef fun(argumen):\n    return argumen+8\nargumen=input(\"input anything \")\nfun(argumen)\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "#What will be output of code?\ndef fun(str):\n    str2=set(str)\n    dict={}\n    for i in str2:\n        dict[i]=str.count(i)\n    return dict\nfun(\"shivam yadav\")\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "#This is a program for heterogram(A heterogram is a word, phrase, or sentence in which no \n#letter of the alphabet occurs more than once. ) check. Debug if any.\n\n\nn=input(\"enter a string : \")\ndef fun1(n):\n    for s in n:\n        if ord(s)>=ord('a') and ord(s)<=ord('z') or ord(s)>=ord('A') and ord(s)<=ord('Z') :\n            if n.count(s)>1:\n                return False\n    return True\n\nif fun1(n):\n    print(\"yes\")\nelse:\n    print(\"no\")\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "#What star pattern it will show\n\nnum_rows = int(input(\"Enter the number of rows\"));\nfor i in range(0, num_rows):\n\tfor j in range(0, num_rows-i-1):\n\t\tprint(end=\" \")\n\tfor j in range(0, i+1):\n\t\tprint(\"*\", end=\" \")\n\tprint()\n\nanswer:-\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "#What will be output of following code if there is any error please do correct?\nstr=\"shivam yadav\"\nstr[5]=\"k\"\nprint(str)\n",
+      "ans": "",
+      "hint": ""
+    },
+    {
+      "que": "#Debug if required\n\ncapacity = 11\nnumberofitems = []\ncount = 0\n\ndef addingproducts(item):\n    global count\n    if count < capacity:\n        numberofitems.append(item)\n        count += 1\n    else:\n        print(\"You can not add more in this cart\")\n\ndef removingproducts(item):\n    global count\n    if count <= 0:\n        print(\"Cart is empty\")\n        return\n    for i in range(len(numberofitems)):\n        if numberofitems[i] == item:\n            numberofitems.pop(i)\n            count -= 1\n            break\n\ndef amount_to_pay(count1):\n    amount = count1 * 75\n    if count1 >= 10:\n        amount = amount - count1 % 10\n    return amount\n",
+      "ans": "",
+      "hint": "1. Pita ji ki patloon 2 bilan choti kr do(5 * ad)\n2. Jo dikhta hai zroori nhi whi ho"
+    },
+    {
+      "que": "#Debug if required\n\nyear = int(input(\"Enter a year: \"))\n\nif (year % 4 == 0) or ((year % 400 == 0) and (year % 100 != 0)):\n    print(\"It is a leap year\")\nelse:\n    print(\"Not a leap year\")\n",
+      "ans": "",
+      "hint": "adrak kya jane bandar ka swaad"
+    },
+    {
+      "que": "#Debug if required\n\ndef function(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i\n        while j >= 0 or arr[j] > key:\n            arr[j + 1] = arr[j]\n            j += 1\n        arr[j + 1] = key\n\nnum_list = [5, 2, 7, 1, 9, 3, 6]\nfunction(num_list)\nprint(num_list)\n",
+      "ans": "",
+      "hint": "Insertion Sort"
+    },
+    {
+      "que": "#Debug if required\n\ndef function(arr, elem):\n    left = 0\n    right = len(arr) - 1\n\n    while left <= right:\n        mid1 = left + (right - left) / 3\n        mid2 = right - (right - left) / 3\n\n        if arr[mid1] == elem:\n            return mid1\n\n        if arr[mid2] == elem:\n            return mid2\n\n        if elem < arr[mid1]:\n            right = mid1 \n        else if elem > arr[mid2]:\n            left = mid2 + 1\n        else:\n            left = mid1 + 1\n            right = mid2 \n\n    return -1\n\nnum_list = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\nelem = 11\n\nindex = function(num_list, elem)\n\nif index != -1:\n    print(\"Element found at index\", index)\nelse:\n    print(\"Element not found\")\n",
+      "ans": "",
+      "hint": "Ternary Search"
+    },
+    {
+      "que": "#Debug if required\n\ndef tower_of_hanoi(n, source, auxiliary, target):\n    if n == 0:\n        return\n    if n == 1:\n        print(\"Move disk\", n, \"from\", source, \"to\", target)\n    else:\n        tower_of_hanoi(n-1, source, target, auxiliary)\n        print(\"Move disk\", n, \"from\", source, \"to\", target)\n        tower_of_hanoi(n-1, auxiliary, target, source)\n        tower_of_hanoi(n-1, source, auxiliary, target)",
+      "ans": "",
+      "hint": "function name says it all"
+    },
+    {
+      "que": "#Debug if required\n\nclass Rectangle_mod:\n  count=0\n\n  def __init__(self,len=1,breadth=1):\n    print(\"In constructor\")\n    self.mySetLen(len)\n    self.mySetBreadth(breadth)\n    Rectangle_mod.count=Rectangle_mod.count+1\n\n  def mySetLen(self,len):\n    print(\"in mySetLen\")\n    if len<=0:\n      raise ValueError(\"Len cannot be less than or equals to ZERO\")\n    self.length=len\n\n  def mySetBreadth(self,b):\n    print(\"In mySetBreadth\")\n    if b<=0:\n      raise ValueError(\"Breadth cannot be less than or equals to ZERO\")\n    self._breadth=b\n\n  \n  def myArea(self):\n    return self.length * self._breadth\n\n  def myPerimeter(self):\n    return 2*(self.length+self._breadth)\n    \n  def __str__(self):\n    return \"Length:{}, breadth:{}\".format(self.length,self._breadth)\n\n  def myGetLen(self):\n    print(\"In GetLen-1\")\n    return self.length\n  \n  def myGetBreadth(self):\n    print(\"in GetBreadth-2\")\n    return self._breadth\n\n  length=property(myGetLen,mySetLen)\n  \n  breadth=property(myGetBreadth,mySetBreadth)\n  r=rectangle_mod(10,20)\n",
+      "ans": "",
+      "hint": "write in code in that way so that this code doesn’t run infinite times"
+    },
+    {
+     "que": "#Debug if required\n\nclass Rectangle_Decorators:\n  count=0\n  \n  def __init__(self,len=1,breadth=1):\n    print(\"In constructor\")\n    self.length=len\n    self.breadth=breadth\n   count= count+1\n\n  @property\n  def length(self):\n    print(\"In GetLen-1\")\n    return self._length\n\n  @length.setter\n  def length(self,len):\n    print(\"in mySetLen\")\n    if len<=0:\n      raise ValueError(\"Len cannot be less than or equals to ZERO\")\n    self._length=len\n  \n\n  @property\n  def breadth(self):\n    print(\"in GetBreadth-2\")\n    return self._breadth\n\n  @breadth.setter\n  def breadth(self,b):\n    print(\"In mySetBreadth\")\n    if b<=0:\n      raise ValueError(\"Breadth cannot be less than or equals to ZERO\")\n    self._breadth=b\n\n  \n  def myArea(self):\n    return self._length * self._breadth\n\n  def myPerimeter(self):\n    return 2*(self._length+self._breadth)\n    \n  def __str__(self):\n    return \"Length:{}, breadth:{}\".format(self._length,self._breadth)\n\n  def __del__(self):\n    print(\"In del\")\n    count= count-1\n",
+      "ans": "",
+      "hint": " use concept of class variable and instance variables"
+    },
+    {
+      "que": "#Debug if required\n\nclass polygon:\n  def __init__(self,numSides):\n    print(\"in polygon class constructor\")\n    self.numSides=numSides\n\n\n  def numSides(self):\n    print(\"in getter (Poly)\")\n    return self._numSides\n\n  def numSides(self,numSides):\n    print(\"in setter (Poly)\")\n    if numSides<3:\n      raise ValueError(\"numSides <3 not allowed\")\n    self._numSides=numSides\n\n  def __str__(self):\n    return \"Number of sides are: {}\".format(self.numSides)\n",
+      "ans": "",
+      "hint": " use decorators"
+    },
+    {
+      "que": "#Debug if required\n\ndef partition(array, low, high):\n\n\tpivot = array[high]\n\n\ti = low - 1\n\n\tfor j in range(low, high):\n\t\tif array[j] <= pivot:\n\t\t\ti = i + 1\n\t\t\t(array[i], array[j]) = (array[j], array[i])\n\n\t(array[i + 1], array[high]) = (array[high], array[i + 1])\n\n\treturn i + 1\n\n\ndef quickSort(array, low, high):\n\tif low \n\t\tpi = partition(array, low, high)\n\n\t\tquickSort(array, pi + 1, high)\n                             quickSort(array, low, pi - 1)\n\n\n\ndata = [1, 7, 4, 1, 10, 9, -2]\nprint(\"Unsorted Array\")\nprint(data)\n\nsize = len(data)\n\nquickSort(data, 0, size - 1)\n\nprint('Sorted Array in Ascending Order:')\nprint(data)\n",
+      "ans": "",
+      "hint": " check if recursion is in correct order"
+    },
+    {
+      "que": "#Debug if required\n\nclass Node:\n\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\ndef insertAtMid(head, x):\n\n    if(head == None):\n        head = Node(x)\n    else:\n        \n        newNode = Node(x)\n\n        ptr = head\n        length = 0\n        \n\n        while(ptr != None):\n            ptr = ptr.next\n            length += 1\n            \n        if(length % 2 == 0):\n            count = length / 2\n        else:\n            (length + 1) / 2\n\n        ptr = head\n\n        while(count > 1):\n            count -= 1\n            ptr = ptr.next\n\n        newNode.next = ptr.next\n        ptr.next = newNode\n\ndef display(head):\n    temp = head\n    while(temp.next != None):\n        print(str(temp.data), end = \" \")\n        temp = temp.next\n\nhead = Node(1)\nhead.next = Node(2)\nhead.next.next = Node(4)\nhead.next.next.next = Node(5)\n\nprint(\"Linked list before insertion: \", end = \"\")\ndisplay(head)\n\nx = 3\ninsertAtMid(head, x)\n\nprint(\"\\nLinked list after insertion: \" , end = \"\")\ndisplay(head)\n",
+      "ans": "",
+      "hint": " check all node "
+    }
+
+
   ]
 }
