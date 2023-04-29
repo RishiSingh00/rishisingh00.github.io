@@ -44,29 +44,29 @@
 
       <div class="total-time-container">
         <div class="line-horizontal-time"></div>
-        <div class="time">Time : 45 min</div>
+        <div class="time">Time : 30 min</div>
       </div>
 
       <div class="total-questions">
 
-        <div class="text-total-questions">Total Questions : 35</div>
+        <div class="text-total-questions">Total Questions : 15</div>
         <div class="line-horizontal-tque"></div>
         <div class="easy-tq-parent">
           <div class="easy-tq-container">
-            <span>Easy</span>
-            <span class="min"> : 20          05 pts </span>
+            <span>Easy | 5</span>
+            <span class="min"> : 05 pts </span>
           </div>
           <div class="line-vertical-tq"></div>
 
           <div class="line-horizontal-tq-easy"></div>
           <div class="line-horizontal-tq-medium">
-            <span>Medium</span>
-            <span class="min"> : 10            10 pts </span>
+            <span>Med | 5</span>
+            <span class="min"> : 10 pts </span>
           </div>
           <div class="line-horizontal-tq-hard"></div>
           <div class="hard-5-container">
-            <span>Hard</span>
-            <span class="min"> : 5            15pts </span>
+            <span>Hard | 5</span>
+            <span class="min"> : 15 pts </span>
           </div>
           <div class="group-child11"></div>
         </div>
@@ -84,18 +84,18 @@
           <div class="line-vertical-pwrup-sque"></div>
           <div class="easy-10-container">
             <span>Easy</span>
-            <span class="min"> : 10 min </span>
+            <span class="min"> : 5 min </span>
           </div>
           <div class="line-horizontal-sque-easy"></div>
 
           <div class="medium-20-container">
             <span>Medium</span>
-            <span class="min"> : 20 min </span>
+            <span class="min"> : 10 min </span>
           </div>
           <div class="line-horizontal-sque-medium"></div>
           <div class="hard-35-container">
             <span>Hard</span>
-            <span class="min"> : 35 min </span>
+            <span class="min"> : 25 min </span>
           </div>
           <div class="line-horizontal-sque-hard"></div>
         </div>
@@ -126,7 +126,7 @@
         <div class="text-warning2">
           <span>If a participant is </span>
           <span class="cant-return-to">
-          caught using the internet or any other prohibited materials
+          caught using the internet/ exits full screen
         </span>
           <span> , they will be </span>
           <span class="cant-return-to">disqualified</span>
@@ -140,7 +140,7 @@
       <div class="icon">
         <div class="circle1">
           <div class="circle2">
-            <a href="./questions.html"><span class="white">></span></a>
+            <a ><span class="white">></span></a>
           </div>
         </div>
       </div>
@@ -153,21 +153,21 @@
       const button3 = document.querySelector('.button-3');
 
       button1.addEventListener('click', () => {
-        selectedLanguage="cpp"
+        localStorage['selectedLanguage']="cpp"
         button1.classList.add('active');
         button2.classList.remove('active');
         button3.classList.remove('active');
       });
 
       button2.addEventListener('click', () => {
-        selectedLanguage="java"
+        localStorage['selectedLanguage']="java"
         button2.classList.add('active');
         button1.classList.remove('active');
         button3.classList.remove('active');
       });
 
       button3.addEventListener('click', () => {
-        selectedLanguage="python"
+        localStorage['selectedLanguage']="python"
         button3.classList.add('active');
         button1.classList.remove('active');
         button2.classList.remove('active');
@@ -177,10 +177,19 @@
         const nextButton = document.querySelector('.icon');
         nextButton.addEventListener("click",
                 () => {
-                  localStorage.setItem('selectedLanguage', selectedLanguage);
+
                   console.log(localStorage['name'])
                   console.log(localStorage['contact'])
                   console.log(localStorage['selectedLanguage'])
+                  if(localStorage['selectedLanguage'] === "") {
+                    alert("No Language Selected");
+
+                  }
+                  else {
+                    window.location.href = './questions.html';
+                  }
+
+
                 });
 
       });

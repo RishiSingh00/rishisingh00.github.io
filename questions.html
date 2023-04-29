@@ -18,44 +18,14 @@
 <body>
 <div class="main" id="desktop1">
   <div class="count">
-    <h1 class="count"><span class="green">01</span>/45</h1>
+    <h1 class="count"><span class="green"></span>/15</h1>
     <h1 title="Timer" id="timer"></h1>
   </div>
   <div class="main-rectangle">
     <div class="rectangle">
       <div class="rectangle1"></div>
-      <div class="rectangle1 overlay">
+      <div class="rectangle2">
             <textarea id="editor" class="form-control" aria-label="Editor Space"></textarea>
-
-          <!--    <div class="col">-->
-          <!--        <textarea type="text" class="form-control" aria-label="Last name"></textarea>-->
-          <!--    </div>-->
-
-
-<!--        <div class="question">-->
-<!--          <h1>This is a dummy question?</h1>-->
-<!--          <div id="btn" class="icon">-->
-<!--            <div class="circle1">-->
-<!--              <div class="circle2">-->
-<!--                <span class="white">?</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="options">-->
-<!--          <div class="option">-->
-<!--            <h1>Option1</h1>-->
-<!--          </div>-->
-<!--          <div class="option">-->
-<!--            <h1>Option2</h1>-->
-<!--          </div>-->
-<!--          <div class="option">-->
-<!--            <h1>Option3</h1>-->
-<!--          </div>-->
-<!--          <div class="option">-->
-<!--            <h1>Option4</h1>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
@@ -86,7 +56,7 @@
         <h1><span class="green">Hint</span></h1>
       </div>
       <div class="question">
-        <h1>This is a Hint and wil cost -2 mins</h1>
+        <h1 class="question-hint">This is a Hint and wil cost -2 mins to solve and do it</h1>
       </div>
     </div>
   </div>
@@ -94,20 +64,33 @@
 <!--codemirror api-->
 <script>
 
-
   var editor = CodeMirror.fromTextArea(document.getElementById("editor"),{
     // google clike mode at bottom MIME type defined
     mode:"text/x-c++src",
     theme:"dracula",
     lineNumbers:true,
     autoCloseBrackets:true,
+    css: "font-size: 50px;"
   })
-  var width = window.innerWidth
-  editor.setSize(0.94*width,"800")
-  // function cli(){
-  //     // Create element with <a> tag
-  //     const content = editor.getValue()
-  // }
+  //const width = window.innerWidth;
+
+  const widthVal = document.querySelector('.rectangle2').getAttribute.width
+  const width = parseInt(widthVal,10);
+  //const height = parseInt(document.querySelector('.rectangle-2').getAttribute.height,10);
+  const parent = document.querySelector(".rectangle2");
+  const parentHeight = parent.clientHeight;
+  editor.setSize(width,parentHeight);
+
+  document.addEventListener("fullscreenchange", function() {
+    alert("HI")
+    // Code to be executed when the full screen mode changes
+    const parent = document.querySelector(".rectangle2");
+    const parentHeight = parent.clientHeight;
+    console.log(parentHeight);
+    console.log(widthVal+" "+parentHeight);
+
+  });
+
 
   let hintCount = 0; // initialize count variable
 
@@ -120,9 +103,13 @@
 
 <script>
   const queNo = document.querySelector('.green')
+  queNo.innerHTML = ""+(parseInt(localStorage['currentIndex'],10)+1);
+  let data = [];
+  let dataString = "Name : " + localStorage['name'] + "\n" + "Contact No. : " + localStorage['contact'] + "\nLanguage : " + localStorage['selectedLanguage'] + "\n";
+
   document.addEventListener("DOMContentLoaded", () => {
-    let currentIndex = 0;
-    let data = [];
+    let currentIndex = localStorage['currentIndex'];
+
     const languageSelect = 'cpp'
     const dataViewer = document.getElementById("editor")
 
@@ -130,7 +117,7 @@
     fetch('./assets/data/data.json')
             .then(res => res.json())
             .then(json => {
-              data = json[languageSelect]
+              data = json[localStorage['selectedLanguage']]
               //dataViewer.innerHTML = data[currentIndex].que;
               editor.getDoc().setValue(data[currentIndex].que);
               console.log(dataViewer.value)
@@ -138,7 +125,7 @@
             })
             .catch(error => console.error(error));
 
-    var dataString = "";
+
     nextButton.addEventListener("click",
             () => {
               if (currentIndex < data.length) {
@@ -150,30 +137,178 @@
                 console.log(editor.getValue())
                 data[currentIndex].ans = editor.getDoc().getValue;
                 currentIndex++;
+                if(currentIndex === data.length) {
+                  saveText(dataString)
+                }
                 if(currentIndex<data.length) {
-                  queNo.innerHTML = ""+(currentIndex+1);
-                  if(currentIndex+1>3) {
+                  queNo.innerHTML = ""+(parseInt(localStorage['currentIndex'],10)+2);
+
+                  if(currentIndex+1>5) {
                     queNo.style.color = "yellow"
                   }
+                  if(currentIndex+1>10) {
+                    queNo.style.color = "red"
+                  }
+                  if(currentIndex+1 === 6){
+                    localStorage['easyTime'] = document.getElementById('timer').innerHTML;
+                  }
+                  if(currentIndex+1 === 11){
+                    localStorage['medTime'] = document.getElementById('timer').innerHTML;
+                  }
+
                   editor.getDoc().setValue(data[currentIndex].que);
                 }
                 console.log("currentIndex : "+currentIndex+" "+data.length);
 
               } else {
-                alert("End");
-                console.log(data)
-
-                var blob = new Blob([dataString],{type:'text/plain'});
-                var link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = "ans.txt";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                saveText(dataString)
               }
+              localStorage['currentIndex'] = currentIndex;
             });
+
   });
+  function saveText(dataString) {
+   // alert(localStorage['hintCount']);
+    localStorage.removeItem('countdownEnd');
+    //console.log('data')
+    dataString = "Time Remaining : "+document.getElementById('timer').innerHTML+"\nEasy Time : "+localStorage['easyTime']+"\nMedium Time : "+
+            localStorage['medTime'] +"\n"+"Hints : "+localStorage['hintCount']+"\n"+dataString;
+    const blob = new Blob([dataString], {type: 'text/plain'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = "STB_"+localStorage['contact'];
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.location.href = './thank.html';
+  }
+
+  function startTimer() {
+    var countDownTime = 30 * 1000;
+    var endTime = localStorage.getItem("countdownEnd");
+
+    if (!endTime) {
+      var now = new Date().getTime();
+      endTime = now + countDownTime;
+      localStorage.setItem("countdownEnd", endTime);
+    } else {
+      endTime = parseInt(endTime); // parse as integer
+    }
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = endTime - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML =
+               minutes + " : " + seconds;
+
+      if (document.getElementById('timer').innerHTML === "0 : 0") {
+        // clearInterval(x);
+        // document.getElementById("timer").innerHTML = "EXPIRED";
+        // localStorage.removeItem("countdownEnd");
+        localStorage.removeItem("countdownEnd");
+        saveText(dataString);
+        clearInterval(x);
+      } else {
+        localStorage.setItem("countdownEnd", endTime);
+      }
+    }, 1000);
+  }
+
+  window.onload = function () {
+    startTimer();
+  };
+
+
+
+  //shiv's func
+  //
+  // var sec= 300*5,
+  //     countDiv= document.getElementById("timer"),
+  //     secpass,
+  //     countDown   = setInterval(function () {
+  //       'use strict';
+  //       secpass();
+  //     }, 1000);
+  //
+  // function secpass() {
+  //   'use strict';
+  //
+  //   var min     = Math.floor(sec / 60),
+  //       remSec  = sec % 60;
+  //
+  //   if (remSec < 10) {
+  //
+  //     remSec = '0' + remSec;
+  //
+  //   }
+  //   if (min < 10) {
+  //
+  //     min = '0' + min;
+  //
+  //   }
+  //   countDiv.innerHTML =
+  //   document.getElementById("timer").innerHTML = min + ":" + remSec;
+  //
+  //   if (sec > 0) {
+  //
+  //     sec = sec - 1;
+  //
+  //   } else {
+  //     clearInterval(countDown);
+  // //    countDiv.innerHTML = 'countdown done';
+  //    // validate();
+  //   //  window.location = "../pages/task_two.html"
+  //   }
+  // }
+  // Modal
+
+  var modal = document.getElementById("myModal");
+
+  var hintBtn = document.querySelector(".icon-hint");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  var desktop = document.getElementById("desktop1");
+
+
+  hintBtn.onclick = function () {
+
+      modal.style.display = "flex";
+      desktop.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+    if(localStorage['currentIndex']<5)
+    {
+      document.querySelector('.question-hint').innerHTML = "Easy Que | No Hint"
+    }
+    else{
+      document.querySelector('.question-hint').innerHTML = data[localStorage['currentIndex']].hint;
+      if(!(localStorage['sawHint'] === localStorage['currentIndex'])) {
+        localStorage['hintCount']++;
+        localStorage['sawHint'] = localStorage['currentIndex'];
+      }
+    }
+
+  };
+
+
+  span.onclick = function () {
+    modal.style.display = "none";
+    desktop.style.backgroundColor = "#000";
+  };
+
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      desktop.style.backgroundColor = "#000";
+    }
+  };
+
+
 </script>
-<script src="assets/js/questions.js"></script>
+<!--<script src="assets/js/questions.js"></script>-->
 </body>
 </html>

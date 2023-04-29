@@ -30,6 +30,14 @@
         </div>
     </div>
     <script>
+        localStorage.removeItem('countdownEnd');
+        localStorage['currentIndex'] = 0;
+        localStorage['selectedLanguage']="";
+        localStorage['easyTime']='';
+        localStorage['medTime']='';
+        localStorage['hardTime']='';
+        localStorage['hintCount'] = 0;
+        localStorage['sawHint'] = -1;
         document.addEventListener("DOMContentLoaded", () => {
             const nextButton = document.querySelector('.icon');
             const nameVal = document.getElementById('name');

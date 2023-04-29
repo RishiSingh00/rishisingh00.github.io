@@ -19,6 +19,41 @@
       "que": "// Your Fourth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
       "ans": "",
       "hint":"hello i am hint for question4"
+    },{
+      "que": "// Your fifth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
+    },{
+      "que": "// Your sixth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
+    },{
+      "que": "// Your 7 C++ Program#include <iostream>\n\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question1"
+    },
+    {
+      "que": "// Your 8 C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am 8 for question2"
+    },
+    {
+      "que": "// Your 9 C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am 9 for question3"
+    },
+    {
+      "que": "// Your Fourth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
+    },{
+      "que": "// Your fifth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
+    },{
+      "que": "// Your sixth C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
+      "ans": "",
+      "hint":"hello i am hint for question4"
     }
   ],
 
