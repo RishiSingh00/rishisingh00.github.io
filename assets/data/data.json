@@ -62,6 +62,10 @@
       "que": "// Your Second C++ Program\n\n#include <iostream>\n\nint main() {\n    std::cout << \"Bye World!\";\n    return 0;\n}\n",
       "ans": "",
       "hint":"hello i am hint for question2"
+    },{
+      "que":"ans",
+      "ans": "",
+      "hint":"hello i am hint for question2"
     }
   ],
 

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'MonografTextRegular';
-  src: url(../fonts/MonografTextRegular.ttf);
+  font-family: 'MonografRegular';
+  src: url(../fonts/MonografRegular.ttf);
   font-weight: 700;
 }
 
@@ -15,7 +15,7 @@
   top: 40px;
   left: 55px;
   font-size: 50px;
-  font-family: 'MonografTextRegular',sans-serif;
+  font-family: 'MonografRegular',sans-serif;
 }
 .rectangle-1 {
   position: absolute;
@@ -97,7 +97,7 @@
   color: white;
   padding: 10px 20px;
   font-size: 30px;
-  font-family: "Monograf",sans-serif;
+  font-family: "MonografRegular",sans-serif;
   transition: all 0.3s linear;
 }
 .button-1:hover{
@@ -163,7 +163,7 @@ button.active {
   color: white;
   padding: 10px 20px;
   font-size: 30px;
-  font-family: "Monograf",sans-serif;
+  font-family: "MonografRegular",sans-serif;
   transition: all 0.3s linear;
 }
 .button-2:hover{
@@ -184,7 +184,7 @@ button.active {
   color: white;
   padding: 10px 20px;
   font-size: 30px;
-  font-family: "Monograf",sans-serif;
+  font-family: 'MonografRegular',sans-serif;
   transition: all 0.3s linear;
 }
 .button-3:hover{
@@ -530,7 +530,7 @@ button.active {
   text-align: left;
   font-size: 30px;
   color: #fff;
-  font-family: "Monograf Text";
+  font-family: 'MonografRegular',sans-serif;
 }
 
 /*next button*/
