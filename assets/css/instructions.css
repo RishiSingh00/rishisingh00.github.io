@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'MonografTextRegular';
+  src: url(../fonts/MonografTextRegular.ttf);
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
 .instructions- {
@@ -9,7 +15,7 @@
   top: 40px;
   left: 55px;
   font-size: 50px;
-  font-family: Monograf,sans-serif;
+  font-family: 'MonografTextRegular',sans-serif;
 }
 .rectangle-1 {
   position: absolute;
