@@ -118,12 +118,13 @@
             .then(res => res.json())
             .then(json => {
               data = json[localStorage['selectedLanguage']]
+              console.log(localStorage['selectedLanguage'])
               //dataViewer.innerHTML = data[currentIndex].que;
               editor.getDoc().setValue(data[currentIndex].que);
               console.log(dataViewer.value)
               // console.log(data.java.length)x
             })
-            .catch(error => console.error(error));
+            .catch(error => console.error(error))
 
 
     nextButton.addEventListener("click",
@@ -184,7 +185,7 @@
   }
 
   function startTimer() {
-    var countDownTime = 30 * 1000;
+    var countDownTime = 30 * 60 * 1000;
     var endTime = localStorage.getItem("countdownEnd");
 
     if (!endTime) {
