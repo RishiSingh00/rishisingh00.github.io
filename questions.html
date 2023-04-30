@@ -177,7 +177,7 @@
     const blob = new Blob([dataString], {type: 'text/plain'});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = "STB_"+localStorage['contact'];
+    link.download = "STB_DAY2_"+localStorage['contact'];
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
