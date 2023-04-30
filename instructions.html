@@ -37,7 +37,7 @@
       <div class="button-lang">
         <button class="button-1" onclick="changeColor(this)">C++</button>
         <button class="button-2" onclick="changeColor(this)">Java</button>
-        <button class="button-3" onclick="changeColor(this)">Python</button>
+<!--        <button class="button-3" onclick="changeColor(this)">Python</button>-->
       </div>
 
       <div class="line-vertical-slang"></div>
@@ -49,24 +49,24 @@
 
       <div class="total-questions">
 
-        <div class="text-total-questions">Total Questions : 15</div>
+        <div class="text-total-questions">Total Questions : 5</div>
         <div class="line-horizontal-tque"></div>
         <div class="easy-tq-parent">
           <div class="easy-tq-container">
-            <span>Easy | 5</span>
+            <span>Easy | 0</span>
             <span class="min"> : 05 pts </span>
           </div>
           <div class="line-vertical-tq"></div>
 
           <div class="line-horizontal-tq-easy"></div>
           <div class="line-horizontal-tq-medium">
-            <span>Med | 5</span>
-            <span class="min"> : 10 pts </span>
+            <span>Med | 0</span>
+            <span class="min"> : 0 pts </span>
           </div>
           <div class="line-horizontal-tq-hard"></div>
           <div class="hard-5-container">
             <span>Hard | 5</span>
-            <span class="min"> : 15 pts </span>
+            <span class="min">  </span>
           </div>
           <div class="group-child11"></div>
         </div>
@@ -77,7 +77,7 @@
         <div class="line-horizontal-pwrup"></div>
 
         <div class="line-vertical-pwrup"></div>
-        <div class="solve-questions-in">Solve Questions in Limited Time</div>
+        <div class="solve-questions-in">Not for Day 2</div>
 
         <div class="pwrup-sque-parent">
 
@@ -101,9 +101,9 @@
         </div>
         <div class="line-horizontal-hint"></div>
         <div class="hint-2-container">
-          <span>Hint :</span>
-          <span class="cant-return-to"> -2 pts</span>
-          <span> from Remaining Time</span>
+          <span>No Hint </span>
+<!--          <span class="cant-return-to"> -2 pts</span>-->
+<!--          <span> from Remaining Time(only Day 1)</span>-->
         </div>
       </div>
 
@@ -150,28 +150,28 @@
       let selectedLanguage = ``;
       const button1 = document.querySelector('.button-1');
       const button2 = document.querySelector('.button-2');
-      const button3 = document.querySelector('.button-3');
+      // const button3 = document.querySelector('.button-3');
 
       button1.addEventListener('click', () => {
         localStorage['selectedLanguage']="cpp"
         button1.classList.add('active');
         button2.classList.remove('active');
-        button3.classList.remove('active');
+        // button3.classList.remove('active');
       });
 
       button2.addEventListener('click', () => {
         localStorage['selectedLanguage']="java"
         button2.classList.add('active');
         button1.classList.remove('active');
-        button3.classList.remove('active');
+        // button3.classList.remove('active');
       });
 
-      button3.addEventListener('click', () => {
-        localStorage['selectedLanguage']="python"
-        button3.classList.add('active');
-        button1.classList.remove('active');
-        button2.classList.remove('active');
-      });
+      // button3.addEventListener('click', () => {
+      //   localStorage['selectedLanguage']="python"
+      //   button3.classList.add('active');
+      //   button1.classList.remove('active');
+      //   button2.classList.remove('active');
+      // });
 
       document.addEventListener("DOMContentLoaded", () => {
         const nextButton = document.querySelector('.icon');

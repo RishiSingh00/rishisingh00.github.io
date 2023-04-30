@@ -18,7 +18,7 @@
 <body>
 <div class="main" id="desktop1">
   <div class="count">
-    <h1 class="count"><span class="green"></span>/15</h1>
+    <h1 class="count"><span class="green"></span>/5</h1>
     <h1 title="Timer" id="timer"></h1>
   </div>
   <div class="main-rectangle">
@@ -282,7 +282,7 @@
       desktop.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
     if(localStorage['currentIndex']<5)
     {
-      document.querySelector('.question-hint').innerHTML = "Easy Que | No Hint"
+      document.querySelector('.question-hint').innerHTML = "No Hint"
     }
     else{
       document.querySelector('.question-hint').innerHTML = data[localStorage['currentIndex']].hint;
