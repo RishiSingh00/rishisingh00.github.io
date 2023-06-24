@@ -37,7 +37,7 @@
       <div class="button-lang">
         <button class="button-1" onclick="changeColor(this)">C++</button>
         <button class="button-2" onclick="changeColor(this)">Java</button>
-<!--        <button class="button-3" onclick="changeColor(this)">Python</button>-->
+       <button class="button-3" onclick="changeColor(this)">Python</button>
       </div>
 
       <div class="line-vertical-slang"></div>
@@ -102,8 +102,8 @@
         <div class="line-horizontal-hint"></div>
         <div class="hint-2-container">
           <span>No Hint </span>
-<!--          <span class="cant-return-to"> -2 pts</span>-->
-<!--          <span> from Remaining Time(only Day 1)</span>-->
+          <span class="cant-return-to"> -2 pts</span>
+          <span> from Remaining Time(only Day 1)</span>
         </div>
       </div>
 
@@ -136,7 +136,7 @@
       </div>
 
 
-<!--      <img class="button-next" alt="" src="assets/img/group-6.svg" />-->
+<img class="button-next" alt="" src="assets/img/group-6.svg" />
       <div class="icon">
         <div class="circle1">
           <div class="circle2">
@@ -156,22 +156,22 @@
         localStorage['selectedLanguage']="cpp"
         button1.classList.add('active');
         button2.classList.remove('active');
-        // button3.classList.remove('active');
+        button3.classList.remove('active');
       });
 
       button2.addEventListener('click', () => {
         localStorage['selectedLanguage']="java"
         button2.classList.add('active');
         button1.classList.remove('active');
-        // button3.classList.remove('active');
+        button3.classList.remove('active');
       });
 
-      // button3.addEventListener('click', () => {
-      //   localStorage['selectedLanguage']="python"
-      //   button3.classList.add('active');
-      //   button1.classList.remove('active');
-      //   button2.classList.remove('active');
-      // });
+       button3.addEventListener('click', () => {
+         localStorage['selectedLanguage']="python"
+         button3.classList.add('active');
+         button1.classList.remove('active');
+         button2.classList.remove('active');
+       });
 
       document.addEventListener("DOMContentLoaded", () => {
         const nextButton = document.querySelector('.icon');
